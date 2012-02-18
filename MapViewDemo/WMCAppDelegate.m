@@ -7,14 +7,71 @@
 //
 
 #import "WMCAppDelegate.h"
-
+#import "Building.h"
 @implementation WMCAppDelegate
 
 @synthesize window = _window;
+@synthesize aryDatabase;
+
+//updates the name and path for the database.
+-(void)updateNames{
+    databaseName = @"WheresMyClass.sqlite";
+    NSArray* documentsPath = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString* documentsDir = [documentsPath objectAtIndex:0];
+    databasePath = [documentsDir stringByAppendingPathComponent:databaseName];
+}
+
+//checks if db  was found and if not copies it from the resources dir.
+-(void)checkAndCreateDatabase{
+    BOOL success;
+    NSFileManager* fileManager = [NSFileManager defaultManager];
+    success = [fileManager fileExistsAtPath:databasePath];
+    if(success)
+    {
+        return;
+    }
+    NSString* databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:databaseName];
+    [fileManager copyItemAtPath:databasePathFromApp toPath:databasePath error:nil];
+}
+
+//loop through database object and push it into an array.
+-(void)readWordsFromDatabase{
+    db = [FMDatabase databaseWithPath:databasePath];
+    aryDatabase = [[NSMutableArray alloc] init];
+    [db setLogsErrors:true];
+    [db setTraceExecution:true];
+    if(![db open])
+    {
+        NSLog(@"Failed to open database");
+        return;
+    }
+    else
+    {
+        NSLog(@"Openned database successfully");
+    }
+    FMResultSet* rs = [db executeQuery: @"select * from Building"];
+    while([rs next])
+    {
+        int tmpID = [rs intForColumn:@"Building_ID"];
+        NSString* tmpName = [rs stringForColumn:@"Name"];
+        NSString* tmpAcr    = [rs stringForColumn:@"Acronym"];
+        NSString* tmpLong = [rs stringForColumn:@"Longitude"];
+        NSString* tmpLat = [rs stringForColumn:@"Latitude"];
+        Building* tmpBuilding = [[Building alloc] initWithData:tmpID :tmpName :tmpAcr :tmpLong :tmpLat];
+        [aryDatabase addObject:tmpBuilding];
+        NSLog(@"Added DB item: %@", tmpName);
+    }
+    [db close];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    NSLog(@"entering App did finish lonch");
+    [self updateNames];
+    [self checkAndCreateDatabase];
+    [self readWordsFromDatabase];
+    
     return YES;
 }
 							

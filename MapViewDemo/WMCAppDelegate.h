@@ -7,9 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@interface WMCAppDelegate : UIResponder <UIApplicationDelegate>
+#import "FMDatabase.h"
+@interface WMCAppDelegate : UIResponder <UIApplicationDelegate>{
+    NSMutableArray *aryDatabase;
+    NSString* databaseName;
+    NSString* databasePath;
+    FMDatabase* db;
+}
 
 @property (strong, nonatomic) UIWindow *window;
+@property (nonatomic, retain) NSMutableArray* aryDatabase;
 
 @end

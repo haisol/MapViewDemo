@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A00E1DE14DF0E950036D31E /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A00E1DD14DF0E950036D31E /* CoreAudio.framework */; };
+		0A00E1E114DF0EA10036D31E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A00E1E014DF0EA10036D31E /* CoreLocation.framework */; };
+		0A9DCB6514DF8F45000BCAAF /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9DCB6014DF8F45000BCAAF /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0A9DCB6614DF8F45000BCAAF /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9DCB6214DF8F45000BCAAF /* FMDatabaseAdditions.m */; };
+		0A9DCB6E14DF9028000BCAAF /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A9DCB6D14DF9028000BCAAF /* libsqlite3.0.dylib */; };
+		0A9DCB7714DF9247000BCAAF /* Building.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9DCB7614DF9247000BCAAF /* Building.m */; };
+		0A9DCB7914DFA1CA000BCAAF /* WheresMyClass.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 0A9DCB7814DFA1CA000BCAAF /* WheresMyClass.sqlite */; };
+		0A9DCB7D14DFA8AB000BCAAF /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A9DCB7C14DFA8AB000BCAAF /* FMResultSet.m */; };
 		0AA854BE14D7BAB100B723F5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA854BD14D7BAB100B723F5 /* UIKit.framework */; };
 		0AA854C014D7BAB100B723F5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA854BF14D7BAB100B723F5 /* Foundation.framework */; };
 		0AA854C214D7BAB100B723F5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA854C114D7BAB100B723F5 /* CoreGraphics.framework */; };
@@ -15,22 +23,36 @@
 		0AA854CE14D7BAB100B723F5 /* WMCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA854CD14D7BAB100B723F5 /* WMCAppDelegate.m */; };
 		0AA854D114D7BAB100B723F5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA854CF14D7BAB100B723F5 /* MainStoryboard.storyboard */; };
 		0AA854D414D7BAB100B723F5 /* WMCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA854D314D7BAB100B723F5 /* WMCViewController.m */; };
+		0AA854DB14D7BB8300B723F5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA854DA14D7BB8300B723F5 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A00E1DD14DF0E950036D31E /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		0A00E1E014DF0EA10036D31E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		0A9DCB5F14DF8F45000BCAAF /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		0A9DCB6014DF8F45000BCAAF /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		0A9DCB6114DF8F45000BCAAF /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		0A9DCB6214DF8F45000BCAAF /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		0A9DCB6414DF8F45000BCAAF /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		0A9DCB6D14DF9028000BCAAF /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
+		0A9DCB7514DF9247000BCAAF /* Building.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Building.h; sourceTree = "<group>"; };
+		0A9DCB7614DF9247000BCAAF /* Building.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Building.m; sourceTree = "<group>"; };
+		0A9DCB7814DFA1CA000BCAAF /* WheresMyClass.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = WheresMyClass.sqlite; sourceTree = "<group>"; };
+		0A9DCB7C14DFA8AB000BCAAF /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
 		0AA854B914D7BAB100B723F5 /* MapViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AA854BD14D7BAB100B723F5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0AA854BF14D7BAB100B723F5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		0AA854C114D7BAB100B723F5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		0AA854C514D7BAB100B723F5 /* MapViewDemo-Info.plist */ = {isa = PBXFileReference; path = "MapViewDemo-Info.plist"; sourceTree = "<group>"; };
+		0AA854C514D7BAB100B723F5 /* MapViewDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MapViewDemo-Info.plist"; sourceTree = "<group>"; };
 		0AA854C714D7BAB100B723F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0AA854C914D7BAB100B723F5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0AA854CB14D7BAB100B723F5 /* MapViewDemo-Prefix.pch */ = {isa = PBXFileReference; path = "MapViewDemo-Prefix.pch"; sourceTree = "<group>"; };
-		0AA854CC14D7BAB100B723F5 /* WMCAppDelegate.h */ = {isa = PBXFileReference; path = WMCAppDelegate.h; sourceTree = "<group>"; };
+		0AA854CB14D7BAB100B723F5 /* MapViewDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MapViewDemo-Prefix.pch"; sourceTree = "<group>"; };
+		0AA854CC14D7BAB100B723F5 /* WMCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMCAppDelegate.h; sourceTree = "<group>"; };
 		0AA854CD14D7BAB100B723F5 /* WMCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMCAppDelegate.m; sourceTree = "<group>"; };
 		0AA854D014D7BAB100B723F5 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		0AA854D214D7BAB100B723F5 /* WMCViewController.h */ = {isa = PBXFileReference; path = WMCViewController.h; sourceTree = "<group>"; };
+		0AA854D214D7BAB100B723F5 /* WMCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMCViewController.h; sourceTree = "<group>"; };
 		0AA854D314D7BAB100B723F5 /* WMCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMCViewController.m; sourceTree = "<group>"; };
+		0AA854DA14D7BB8300B723F5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +60,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A9DCB6E14DF9028000BCAAF /* libsqlite3.0.dylib in Frameworks */,
+				0A00E1E114DF0EA10036D31E /* CoreLocation.framework in Frameworks */,
+				0A00E1DE14DF0E950036D31E /* CoreAudio.framework in Frameworks */,
+				0AA854DB14D7BB8300B723F5 /* MapKit.framework in Frameworks */,
 				0AA854BE14D7BAB100B723F5 /* UIKit.framework in Frameworks */,
 				0AA854C014D7BAB100B723F5 /* Foundation.framework in Frameworks */,
 				0AA854C214D7BAB100B723F5 /* CoreGraphics.framework in Frameworks */,
@@ -47,9 +73,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A9DCB5D14DF8F0D000BCAAF /* database */ = {
+			isa = PBXGroup;
+			children = (
+				0A9DCB7C14DFA8AB000BCAAF /* FMResultSet.m */,
+				0A9DCB5F14DF8F45000BCAAF /* FMDatabase.h */,
+				0A9DCB6014DF8F45000BCAAF /* FMDatabase.m */,
+				0A9DCB6114DF8F45000BCAAF /* FMDatabaseAdditions.h */,
+				0A9DCB6214DF8F45000BCAAF /* FMDatabaseAdditions.m */,
+				0A9DCB6414DF8F45000BCAAF /* FMResultSet.h */,
+			);
+			name = database;
+			sourceTree = "<group>";
+		};
+		0A9DCB6814DF8F7E000BCAAF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0A9DCB7814DFA1CA000BCAAF /* WheresMyClass.sqlite */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0A9DCB6F14DF9090000BCAAF /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				0A9DCB5D14DF8F0D000BCAAF /* database */,
+				0A9DCB7514DF9247000BCAAF /* Building.h */,
+				0A9DCB7614DF9247000BCAAF /* Building.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		0AA854AE14D7BAB000B723F5 = {
 			isa = PBXGroup;
 			children = (
+				0A9DCB6F14DF9090000BCAAF /* Classes */,
+				0A9DCB6814DF8F7E000BCAAF /* Resources */,
 				0AA854C314D7BAB100B723F5 /* MapViewDemo */,
 				0AA854BC14D7BAB100B723F5 /* Frameworks */,
 				0AA854BA14D7BAB100B723F5 /* Products */,
@@ -67,6 +126,10 @@
 		0AA854BC14D7BAB100B723F5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A9DCB6D14DF9028000BCAAF /* libsqlite3.0.dylib */,
+				0A00E1E014DF0EA10036D31E /* CoreLocation.framework */,
+				0A00E1DD14DF0E950036D31E /* CoreAudio.framework */,
+				0AA854DA14D7BB8300B723F5 /* MapKit.framework */,
 				0AA854BD14D7BAB100B723F5 /* UIKit.framework */,
 				0AA854BF14D7BAB100B723F5 /* Foundation.framework */,
 				0AA854C114D7BAB100B723F5 /* CoreGraphics.framework */,
@@ -150,6 +213,7 @@
 			files = (
 				0AA854C814D7BAB100B723F5 /* InfoPlist.strings in Resources */,
 				0AA854D114D7BAB100B723F5 /* MainStoryboard.storyboard in Resources */,
+				0A9DCB7914DFA1CA000BCAAF /* WheresMyClass.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +227,10 @@
 				0AA854CA14D7BAB100B723F5 /* main.m in Sources */,
 				0AA854CE14D7BAB100B723F5 /* WMCAppDelegate.m in Sources */,
 				0AA854D414D7BAB100B723F5 /* WMCViewController.m in Sources */,
+				0A9DCB6514DF8F45000BCAAF /* FMDatabase.m in Sources */,
+				0A9DCB6614DF8F45000BCAAF /* FMDatabaseAdditions.m in Sources */,
+				0A9DCB7714DF9247000BCAAF /* Building.m in Sources */,
+				0A9DCB7D14DFA8AB000BCAAF /* FMResultSet.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +342,7 @@
 				0AA854D914D7BAB100B723F5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
