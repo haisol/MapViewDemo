@@ -24,6 +24,7 @@
 		0AA854D114D7BAB100B723F5 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AA854CF14D7BAB100B723F5 /* MainStoryboard.storyboard */; };
 		0AA854D414D7BAB100B723F5 /* WMCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AA854D314D7BAB100B723F5 /* WMCViewController.m */; };
 		0AA854DB14D7BB8300B723F5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA854DA14D7BB8300B723F5 /* MapKit.framework */; };
+		D8D7482814F058CC00A89599 /* TableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D8D7482714F058CC00A89599 /* TableViewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +54,8 @@
 		0AA854D214D7BAB100B723F5 /* WMCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WMCViewController.h; sourceTree = "<group>"; };
 		0AA854D314D7BAB100B723F5 /* WMCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMCViewController.m; sourceTree = "<group>"; };
 		0AA854DA14D7BB8300B723F5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D8D7482614F058CC00A89599 /* TableViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewViewController.h; sourceTree = "<group>"; };
+		D8D7482714F058CC00A89599 /* TableViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +149,8 @@
 				0AA854D214D7BAB100B723F5 /* WMCViewController.h */,
 				0AA854D314D7BAB100B723F5 /* WMCViewController.m */,
 				0AA854C414D7BAB100B723F5 /* Supporting Files */,
+				D8D7482614F058CC00A89599 /* TableViewViewController.h */,
+				D8D7482714F058CC00A89599 /* TableViewViewController.m */,
 			);
 			path = MapViewDemo;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 				0A9DCB6614DF8F45000BCAAF /* FMDatabaseAdditions.m in Sources */,
 				0A9DCB7714DF9247000BCAAF /* Building.m in Sources */,
 				0A9DCB7D14DFA8AB000BCAAF /* FMResultSet.m in Sources */,
+				D8D7482814F058CC00A89599 /* TableViewViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
