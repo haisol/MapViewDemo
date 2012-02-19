@@ -313,6 +313,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MapViewDemo/MapViewDemo-Prefix.pch";
 				INFOPLIST_FILE = "MapViewDemo/MapViewDemo-Info.plist";
+				"INSTALL_PATH[sdk=*]" = "$(LOCAL_APPS_DIR)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

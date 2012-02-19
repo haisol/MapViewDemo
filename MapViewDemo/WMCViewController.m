@@ -119,7 +119,7 @@
 //fires when you move arround to update your location
 -(void) locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
-    NSLog(@"locatioin updating");
+    //NSLog(@"locatioin updating");
     myLocationCoordinate = newLocation.coordinate;
     
     //location updated so center to that location.

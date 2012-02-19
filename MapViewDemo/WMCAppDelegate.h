@@ -12,6 +12,7 @@
     NSMutableArray *aryDatabase;
     NSString* databaseName;
     NSString* databasePath;
+    NSString* queryString;
     FMDatabase* db;
 }
 

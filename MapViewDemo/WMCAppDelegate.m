@@ -26,12 +26,18 @@
     BOOL success;
     NSFileManager* fileManager = [NSFileManager defaultManager];
     success = [fileManager fileExistsAtPath:databasePath];
+    
     if(success)
     {
         return;
     }
     NSString* databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:databaseName];
     [fileManager copyItemAtPath:databasePathFromApp toPath:databasePath error:nil];
+}
+
+
+-(void) saveDatabase{
+
 }
 
 //loop through database object and push it into an array.
@@ -49,6 +55,20 @@
     {
         NSLog(@"Openned database successfully");
     }
+    
+    
+     //NSString *queryString = @"insert into building select null, 'Testing', 'test', '12', '20';"; 
+    
+    [db beginTransaction];
+    
+    [db executeUpdate:@"insert into building select null, 'Testing4', 'test4', '12', '20';"];
+    NSLog(@"Add DB item: %@", @"Testing");
+    //NSLog(@"Err %d: %@", [db lastErrorCode], [db lastErrorMessage]);
+    
+    [db commit];
+    //[db close];
+    
+    
     FMResultSet* rs = [db executeQuery: @"select * from Building"];
     while([rs next])
     {
@@ -59,9 +79,12 @@
         NSString* tmpLat = [rs stringForColumn:@"Latitude"];
         Building* tmpBuilding = [[Building alloc] initWithData:tmpID :tmpName :tmpAcr :tmpLong :tmpLat];
         [aryDatabase addObject:tmpBuilding];
-        NSLog(@"Added DB item: %@", tmpName);
+        NSLog(@"Get DB item: %@", tmpName);
     }
     [db close];
+    [db closeOpenResultSets];
+    //NSLog(@"DBPath: %@", databasePath);
+    
 }
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
